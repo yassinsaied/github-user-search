@@ -1,0 +1,116 @@
+.user-card {
+	background: linear-gradient(145deg, #ffffff, #f0f0f0);
+	border: 1px solid #e1e8ed;
+	border-radius: 12px;
+	padding: 16px;
+	text-align: center;
+	position: relative;
+	height: 220px;
+	width: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.user-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	border-color: #1da1f2;
+}
+
+.card-checkbox {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	z-index: 2;
+}
+
+.card-checkbox input {
+	width: 16px;
+	height: 16px;
+	accent-color: #1da1f2;
+	cursor: pointer;
+}
+
+.user-avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 0 auto 12px;
+	object-fit: cover;
+	border: 3px solid #1da1f2;
+	box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
+}
+
+.user-info {
+	flex: 1;
+	margin: 8px 0;
+}
+
+.user-id {
+	color: #657786;
+	font-size: 11px;
+	font-weight: 500;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.user-login {
+	color: #14171a;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 8px;
+	word-break: break-all;
+}
+
+.profile-btn {
+	background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: 600;
+	transition: all 0.2s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.profile-btn:hover {
+	background: linear-gradient(135deg, #0d8bd9, #0a7bc4);
+	transform: scale(1.05);
+}
+
+.duplicate {
+	border-color: #ffad1f;
+	background: linear-gradient(145deg, #fff8e1, #ffecb3);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.8;
+	}
+}
+
+.duplicate-badge {
+	background: linear-gradient(135deg, #ffad1f, #ff8f00);
+	color: white;
+	padding: 4px 8px;
+	border-radius: 12px;
+	font-size: 10px;
+	font-weight: 600;
+	margin: 4px 0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	box-shadow: 0 2px 4px rgba(255, 173, 31, 0.3);
+}

@@ -1,0 +1,100 @@
+.search-bar {
+	margin: 24px 0;
+	display: flex;
+	justify-content: center;
+}
+
+.search-input-container {
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	align-items: center;
+}
+
+.search-input {
+	width: 100%;
+	padding: 16px 50px 16px 20px; /* Padding à droite pour le bouton clear */
+	font-size: 16px;
+	border: 2px solid #e1e8ed;
+	border-radius: 25px;
+	outline: none;
+	transition: all 0.3s ease;
+	background: #f7f9fa;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	color: #2c3e50; /* ✅ GRIS FONCÉ pour le texte */
+}
+
+.search-input:focus {
+	border-color: #1da1f2;
+	background: white;
+	box-shadow: 0 4px 12px rgba(29, 161, 242, 0.15);
+	transform: translateY(-1px);
+	color: #2c3e50; /* ✅ Garde le gris foncé même en focus */
+}
+
+.search-input::placeholder {
+	color: #657786; /* ✅ Placeholder en gris plus clair */
+	font-style: italic;
+}
+
+/* ✅ BOUTON CLEAR */
+.clear-btn {
+	position: absolute;
+	right: 45px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #e1e8ed;
+	border: none;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #657786;
+	transition: all 0.2s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.clear-btn:hover {
+	background: #c53030;
+	color: white;
+	transform: translateY(-50%) scale(1.1);
+}
+
+/* ✅ ICONE DE RECHERCHE */
+.search-icon {
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #657786;
+	font-size: 16px;
+	pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.search-input-container {
+		max-width: 100%;
+	}
+
+	.search-input {
+		padding: 14px 45px 14px 16px;
+		font-size: 14px;
+	}
+
+	.clear-btn {
+		right: 40px;
+		width: 20px;
+		height: 20px;
+		font-size: 12px;
+	}
+
+	.search-icon {
+		right: 12px;
+		font-size: 14px;
+	}
+}

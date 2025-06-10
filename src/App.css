@@ -1,0 +1,326 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+@keyframes logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	a:nth-of-type(2) .logo {
+		animation: logo-spin infinite 20s linear;
+	}
+}
+
+.card {
+	padding: 2em;
+}
+
+.read-the-docs {
+	color: #888;
+}
+
+.app {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.app-header {
+	background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+	color: white;
+	text-align: center;
+	padding: 30px 20px;
+	margin-bottom: 30px;
+	border-radius: 0 0 20px 20px;
+	box-shadow: 0 4px 20px rgba(29, 161, 242, 0.3);
+}
+
+.app-header h1 {
+	font-size: 28px;
+	font-weight: 700;
+	margin: 0;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Barre unifiée avec mode édition */
+.selection-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 20px;
+	background: linear-gradient(135deg, #f7f9fa, #ffffff);
+	border: 1px solid #e1e8ed;
+	border-radius: 12px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	backdrop-filter: blur(10px);
+	transition: all 0.3s ease;
+}
+
+/* Style quand le mode édition est actif */
+.selection-bar.edit-active {
+	background: linear-gradient(135deg, #e3f2fd, #ffffff);
+	border-color: #1da1f2;
+	box-shadow: 0 4px 16px rgba(29, 161, 242, 0.2);
+}
+
+/* Conteneur des contrôles de gauche */
+.left-controls {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+/* Bouton mode édition dans la barre */
+.edit-btn {
+	padding: 8px 16px;
+	background: linear-gradient(135deg, #6c757d, #5a6268);
+	color: white;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn:hover {
+	background: linear-gradient(135deg, #5a6268, #495057);
+	transform: translateY(-1px);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.edit-btn.active {
+	background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+	box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
+}
+
+.edit-btn.active:hover {
+	background: linear-gradient(135deg, #0d8bd9, #0a7bc4);
+}
+
+/* Sélection dans la barre */
+.select-all {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	font-weight: 500;
+	color: #14171a;
+	transition: color 0.2s ease;
+	font-size: 14px;
+}
+
+.select-all:hover {
+	color: #1da1f2;
+}
+
+.select-all input {
+	width: 16px;
+	height: 16px;
+	accent-color: #1da1f2;
+	cursor: pointer;
+}
+
+/* Actions de droite */
+.action-buttons {
+	display: flex;
+	gap: 8px;
+}
+
+.action-btn {
+	padding: 8px 12px;
+	background: white;
+	border: 1px solid #e1e8ed;
+	border-radius: 16px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: all 0.2s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.action-btn:hover:not(:disabled) {
+	background: #f7f9fa;
+	transform: translateY(-1px);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+	transform: none;
+}
+
+.delete-btn:hover:not(:disabled) {
+	background: #fff5f5;
+	border-color: #fed7d7;
+	color: #c53030;
+}
+
+.loading-more,
+.end-message {
+	grid-column: 1 / -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	text-align: center;
+}
+
+.loading-more p {
+	color: #0366d6;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.end-message p {
+	color: #28a745;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.duplicate-badge {
+	background: linear-gradient(135deg, #ffad1f, #ff8f00);
+	color: white;
+	padding: 4px 8px;
+	border-radius: 12px;
+	font-size: 10px;
+	font-weight: 600;
+	margin: 4px 0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	box-shadow: 0 2px 4px rgba(255, 173, 31, 0.3);
+}
+
+/* Bouton toggle mode édition POSITION STICKY */
+.edit-mode-toggle {
+	text-align: center;
+	margin: 20px 0;
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	background: rgba(246, 248, 250, 0.95);
+	backdrop-filter: blur(10px);
+	padding: 16px 0;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.edit-btn {
+	padding: 12px 24px;
+	background: linear-gradient(135deg, #6c757d, #5a6268);
+	color: white;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn:hover {
+	background: linear-gradient(135deg, #5a6268, #495057);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.edit-btn.active {
+	background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+	box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
+}
+
+.edit-btn.active:hover {
+	background: linear-gradient(135deg, #0d8bd9, #0a7bc4);
+}
+
+.users-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+	padding: 24px;
+	background: linear-gradient(135deg, #f7f9fa, #ffffff);
+	border: 1px solid #e1e8ed;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	backdrop-filter: blur(10px);
+	height: 400px;
+	width: 1000px;
+	margin: 0 auto;
+	overflow-y: auto;
+	margin-bottom: 30px;
+	transition: all 0.3s ease;
+}
+
+.users-container.empty-state {
+	display: flex;
+	grid-template-columns: none;
+}
+
+.empty-display {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 20px;
+	text-align: center;
+	height: 400px;
+	width: 100%;
+}
+
+.empty-display h2 {
+	color: #1da1f2;
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0 0 20px 0;
+}
+
+.empty-display p {
+	color: #657786;
+	font-size: 18px;
+	font-weight: 500;
+	margin: 0;
+	line-height: 1.5;
+}
+
+/* RESPONSIVE - Adaptation selon la taille d'écran */
+@media (max-width: 1200px) {
+	.users-container {
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 800px;
+	}
+}
+
+@media (max-width: 900px) {
+	.users-container {
+		grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur tablette */
+		max-width: 600px;
+	}
+}
+
+@media (max-width: 768px) {
+	.users-container {
+		grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobile */
+		max-width: 400px;
+		gap: 12px;
+	}
+}
+
+@media (max-width: 480px) {
+	.users-container {
+		grid-template-columns: 1fr; /* 1 colonne sur très petit écran */
+		max-width: 280px;
+	}
+}
