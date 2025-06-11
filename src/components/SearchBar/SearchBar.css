@@ -15,14 +15,13 @@
 .search-input {
 	width: 100%;
 	padding: 16px 50px 16px 20px; /* Padding à droite pour le bouton clear */
-	font-size: 16px;
 	border: 2px solid #e1e8ed;
 	border-radius: 25px;
 	outline: none;
 	transition: all 0.3s ease;
 	background: #f7f9fa;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-	color: #2c3e50; /* ✅ GRIS FONCÉ pour le texte */
+	color: #2c3e50;
 }
 
 .search-input:focus {
@@ -30,15 +29,14 @@
 	background: white;
 	box-shadow: 0 4px 12px rgba(29, 161, 242, 0.15);
 	transform: translateY(-1px);
-	color: #2c3e50; /* ✅ Garde le gris foncé même en focus */
+	color: #2c3e50;
 }
 
 .search-input::placeholder {
-	color: #657786; /* ✅ Placeholder en gris plus clair */
+	color: #657786;
 	font-style: italic;
 }
 
-/* ✅ BOUTON CLEAR */
 .clear-btn {
 	position: absolute;
 	right: 45px;
@@ -64,7 +62,6 @@
 	transform: translateY(-50%) scale(1.1);
 }
 
-/* ✅ ICONE DE RECHERCHE */
 .search-icon {
 	position: absolute;
 	right: 16px;

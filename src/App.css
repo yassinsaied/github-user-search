@@ -50,7 +50,7 @@
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Barre unifiée avec mode édition */
+/* Barre avec mode édition */
 .selection-bar {
 	display: flex;
 	justify-content: space-between;

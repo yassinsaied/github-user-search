@@ -1,23 +1,15 @@
 # GitHub User Search
 
-Une application React TypeScript moderne pour rechercher et gérer des utilisateurs GitHub avec des fonctionnalités avancées.
+Une application React TypeScript moderne pour rechercher des utilisateurs GitHub en temps réel, de les visualiser sous forme de cartes, et de les gérer avec des fonctionnalités d'édition, de duplication et de suppression. L'interface est responsive et optimisée pour tous les types d'écrans.
 
 ## Technologies utilisées
-
-### Frontend
 
 -  **React 19** - Library JavaScript pour l'interface utilisateur
 -  **TypeScript** - Typage statique pour JavaScript
 -  **Vite** - Build tool moderne et rapide
 -  **CSS3** - Styles avec variables CSS, Grid et Flexbox
 
-## Description
-
-Cette application permet de rechercher des utilisateurs GitHub en temps réel, de les visualiser sous forme de cartes, et de les gérer avec des fonctionnalités d'édition, de duplication et de suppression. L'interface est responsive et optimisée pour tous les types d'écrans.
-
 ## Fonctionnalités principales
-
-### Recherche
 
 -  Recherche en temps réel avec debounce
 -  Scroll infini pour charger plus de résultats
@@ -27,12 +19,6 @@ Cette application permet de rechercher des utilisateurs GitHub en temps réel, d
 -  Duplication d'utilisateurs avec badge visuel
 -  Suppression en lot des utilisateurs sélectionnés
 -  Lien direct vers les profils GitHub
-
-### Interface utilisateur
-
--  Design moderne et épuré
--  Animations fluides
--  Interface adaptée mobile et desktop
 
 ## Installation et utilisation
 
@@ -63,13 +49,5 @@ npm test
 
 # OU
 npm run test:run
-
-
-
-
-
-
-
-
 
 ```
