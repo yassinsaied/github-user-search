@@ -1,12 +1,75 @@
-# React + Vite
+# GitHub User Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application React TypeScript moderne pour rechercher et gérer des utilisateurs GitHub avec des fonctionnalités avancées.
 
-Currently, two official plugins are available:
+## Technologies utilisées
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend
 
-## Expanding the ESLint configuration
+-  **React 19** - Library JavaScript pour l'interface utilisateur
+-  **TypeScript** - Typage statique pour JavaScript
+-  **Vite** - Build tool moderne et rapide
+-  **CSS3** - Styles avec variables CSS, Grid et Flexbox
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Description
+
+Cette application permet de rechercher des utilisateurs GitHub en temps réel, de les visualiser sous forme de cartes, et de les gérer avec des fonctionnalités d'édition, de duplication et de suppression. L'interface est responsive et optimisée pour tous les types d'écrans.
+
+## Fonctionnalités principales
+
+### Recherche
+
+-  Recherche en temps réel avec debounce
+-  Scroll infini pour charger plus de résultats
+-  Gestion des états de chargement et d'erreur
+-  Messages informatifs quand aucun résultat n'est trouvé
+-  Mode édition pour sélectionner plusieurs utilisateurs
+-  Duplication d'utilisateurs avec badge visuel
+-  Suppression en lot des utilisateurs sélectionnés
+-  Lien direct vers les profils GitHub
+
+### Interface utilisateur
+
+-  Design moderne et épuré
+-  Animations fluides
+-  Interface adaptée mobile et desktop
+
+## Installation et utilisation
+
+### Prérequis
+
+-  Node.js version 16 ou supérieure
+-  npm ou yarn
+
+### Installation
+
+```bash
+# Cloner le projet
+git clone <url-du-repository>
+cd github-user-search
+
+# Installer les dépendances
+npm install
+
+# Lancer l'application en développement
+npm run dev
+```
+
+## Scripts de test
+
+```bash
+# Lancer tous les tests
+npm test
+
+# OU
+npm run test:run
+
+
+
+
+
+
+
+
+
+```
